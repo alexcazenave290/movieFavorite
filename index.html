@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Películas Favoritas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎬 Mis Películas Favoritas</h1>
+        <button id="theme-toggle">Modo Oscuro</button>
+        <input type="text" id="search" placeholder="Buscar película...">
+    </header>
+    <button id="add-movie-btn">Agregar película favorita</button>
+    <form id="add-movie-form" style="display:none;">
+        <input type="text" id="movie-title" placeholder="Título" required>
+        <input type="number" id="movie-year" placeholder="Año" required min="1888" max="2100">
+        <input type="url" id="movie-img" placeholder="URL de la imagen" required>
+        <input type="url" id="movie-trailer" placeholder="URL del tráiler (YouTube)" required>
+        <textarea id="movie-desc" placeholder="Descripción" required></textarea>
+        <button type="submit">Aceptar</button>
+        <button type="button" id="cancel-add-movie">Cancelar</button>
+    </form>
+    <main id="movies-container">
+        <!-- Las tarjetas de películas se generan con JS -->
+    </main>
+
+    <!-- Modal para imagen/tráiler -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
